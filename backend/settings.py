@@ -85,11 +85,11 @@ DATA_ENCRYPTION_KEY = os.environ.get('DJANGO_DATA_ENCRYPTION_KEY', '2e3c189fe3ce
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': os.getenv('DB_PATH', BASE_DIR / 'db.sqlite3'),  # fallback to default
     },
-    "target":{
+    'target': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'target.sqlite3',
+        'NAME': os.getenv('TARGET_DB_PATH', BASE_DIR / 'target.sqlite3'),  # fallback
     }
 }
 
