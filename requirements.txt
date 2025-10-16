@@ -66,7 +66,6 @@ mdurl==0.1.2
 mssql-django==1.5
 multidict==6.6.4
 murmurhash==1.0.13
-mysqlclient==2.2.7
 numpy==2.2.2
 openai==1.102.0
 openpyxl==3.1.5
