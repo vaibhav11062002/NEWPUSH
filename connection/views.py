@@ -6887,8 +6887,8 @@ def get_preLoad_table(request, pid, oid, sid):
     json_data = json.loads(df.to_json(orient='records'))  # use json.loads to get a Python list, not a string
 
     return_json = {
-        "columns" : json_data,
-        "rows": json_columns
+        "columns" : json_columns,
+        "rows": json_data
     }
     return JsonResponse(return_json, safe=False)
 
