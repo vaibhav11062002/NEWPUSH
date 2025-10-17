@@ -2979,7 +2979,7 @@ def table_to_custom_json(table_name):
         cursor.execute(f"PRAGMA table_info({table_name})")
         columns_info = cursor.fetchall()
     columns = [col[1] for col in columns_info]
-    columns.append(columns.pop(0))
+    # columns.append(columns.pop(0))
     # Fetch all rows into pandas DataFrame
     query = f"SELECT * FROM {table_name}"
     df = pd.read_sql_query(query, connection)
